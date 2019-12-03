@@ -4,6 +4,14 @@ body {
   line-height: 1;
 }
 
+@media only screen and (min-width: 600px) {
+  h1 {
+    font-size: 4.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+  }    
+}
+
 textarea{
   background: transparent;
   border: none;

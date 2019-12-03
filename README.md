@@ -14,4 +14,4 @@ https://momentjs.com/
 
 ## Screen Capture
 
-<src img="screencapture.png" width=200px>
+<img src="screencapture.png" width="200px">

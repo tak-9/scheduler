@@ -10,6 +10,9 @@ var scheduleData = {
     "scheduleData17": ""
 };
 
+// The localStorageName must be different for each day
+var localStorageName = "scheduleData" + moment().format('YYYYMMDD');
+
 init();
 function init() {
     setDateInHeader();
@@ -41,7 +44,7 @@ function setTimeColor() {
 
 function setTextInTextarea() {
     // Read localStorage and display values in textarea 
-    scheduleDataLocal = JSON.parse(localStorage.getItem('scheduleData'));
+    scheduleDataLocal = JSON.parse(localStorage.getItem(localStorageName));
     if (scheduleDataLocal != null) {
         for (var i = 9; i < 18; i++) {
             var jsonKey = "scheduleData" + i;
@@ -66,5 +69,5 @@ function saveLocalStorage(hour, str) {
     scheduleData[jsonElementName] = str;
     console.log("scheduleData in saveLocalStorage()" + jsonElementName, scheduleData[jsonElementName]);
     // set it to localStorage
-    localStorage.setItem('scheduleData', JSON.stringify(scheduleData));
+    localStorage.setItem(localStorageName, JSON.stringify(scheduleData));
 };

@@ -14,71 +14,78 @@
 </head>
 
 <body>
-  <header class="jumbotron">
-    <h1>Work Day Scheduler</h1>
-    <p class="lead">A simple calendar app for scheduling your work day</p>
-    <p id="currentDay" class="lead"></p>
-  </header>
+  <nav class="navbar navbar-dark">
+    <div class="navbar-brand">
+      <img src="./assets/images/wall-clock.png" height="30px">
+      Work Day Scheduler</div>
+    <div class="nav navbar-text">A simple calendar app for scheduling your work day</div>
+    <div id="currentDay" class="nav navbar-right" style="color: darkblue;">
+  </nav>
   <div class="container">
     <!-- Timeblocks go here -->
     <div class="row">
       <div class="col-md-12">
 
         <table>
+          <tr>
+            <th class="timeth"><i class="fas fa-clock"></i> Time</th>
+            <th class="scheduleth">Shedule</th>
+            <th class="buttonth">Save</th>
+          </tr>
 
-            <tr>
-              <td class="hour">9AM</td>
-              <td id="9td" class="scheduleTextArea"><textarea id="9textarea"></textarea></td>
-              <td class="scheduleTextArea saveBtn"><button id="9"><i class="fas fa-save"></i></button></td>
-            </tr>
+          <tr>
+            <td class="hour">9AM</td>
+            <td id="9td" class="scheduleTextArea"><textarea id="9textarea"></textarea></td>
+            <td class="scheduleTextArea saveBtn"><button id="9"><i class="fas fa-save"></i></button></td>
+          </tr>
 
-            <tr>
-              <td class="hour">10AM</td>
-              <td id="10td" class="scheduleTextArea"><textarea id="10textarea"></textarea></td>
-              <td class="scheduleTextArea saveBtn"><button id="10"><i class="fas fa-save"></i></button></td>
-            </tr>
+          <tr>
+            <td class="hour">10AM</td>
+            <td id="10td" class="scheduleTextArea"><textarea id="10textarea"></textarea></td>
+            <td class="scheduleTextArea saveBtn"><button id="10"><i class="fas fa-save"></i></button></td>
+          </tr>
 
-            <tr>
-              <td class="hour">11AM</td>
-              <td id="11td" class="scheduleTextArea"><textarea id="11textarea"></textarea></td>
-              <td class="scheduleTextArea saveBtn"><button id="11"><i class="fas fa-save"></i></button></td>
-            </tr>
+          <tr>
+            <td class="hour">11AM</td>
+            <td id="11td" class="scheduleTextArea"><textarea id="11textarea"></textarea></td>
+            <td class="scheduleTextArea saveBtn"><button id="11"><i class="fas fa-save"></i></button></td>
+          </tr>
 
-            <tr>
-              <td class="hour">12AM</td>
-              <td id="12td" class="scheduleTextArea"><textarea id="12textarea"></textarea></td>
-              <td class="scheduleTextArea saveBtn"><button id="12"><i class="fas fa-save"></i></button></td>
-            </tr>
+          <tr>
+            <td class="hour">12AM</td>
+            <td id="12td" class="scheduleTextArea"><textarea id="12textarea"></textarea></td>
+            <td class="scheduleTextArea saveBtn"><button id="12"><i class="fas fa-save"></i></button></td>
+          </tr>
 
-            <tr>
-              <td class="hour">1PM</td>
-              <td id="13td" class="scheduleTextArea"><textarea id="13textarea"></textarea></td>
-              <td class="scheduleTextArea saveBtn"><button id="13"><i class="fas fa-save"></i></button></td>
-            </tr>
+          <tr>
+            <td class="hour">1PM</td>
+            <td id="13td" class="scheduleTextArea"><textarea id="13textarea"></textarea></td>
+            <td class="scheduleTextArea saveBtn"><button id="13"><i class="fas fa-save"></i></button></td>
+          </tr>
 
-            <tr>
-              <td class="hour">2PM</td>
-              <td id="14td" class="scheduleTextArea"><textarea id="14textarea"></textarea></td>
-              <td class="scheduleTextArea saveBtn"><button id="14"><i class="fas fa-save"></i></button></td>
-            </tr>
+          <tr>
+            <td class="hour">2PM</td>
+            <td id="14td" class="scheduleTextArea"><textarea id="14textarea"></textarea></td>
+            <td class="scheduleTextArea saveBtn"><button id="14"><i class="fas fa-save"></i></button></td>
+          </tr>
 
-            <tr>
-              <td class="hour">3PM</td>
-              <td id="15td" class="scheduleTextArea"><textarea id="15textarea"></textarea></td>
-              <td class="scheduleTextArea saveBtn"><button id="15"><i class="fas fa-save"></i></button></td>
-            </tr>
+          <tr>
+            <td class="hour">3PM</td>
+            <td id="15td" class="scheduleTextArea"><textarea id="15textarea"></textarea></td>
+            <td class="scheduleTextArea saveBtn"><button id="15"><i class="fas fa-save"></i></button></td>
+          </tr>
 
-            <tr>
-              <td class="hour">4PM</td>
-              <td id="16td" class="scheduleTextArea"><textarea id="16textarea"></textarea></td>
-              <td class="scheduleTextArea saveBtn"><button id="16"><i class="fas fa-save"></i></button></td>
-            </tr>
+          <tr>
+            <td class="hour">4PM</td>
+            <td id="16td" class="scheduleTextArea"><textarea id="16textarea"></textarea></td>
+            <td class="scheduleTextArea saveBtn"><button id="16"><i class="fas fa-save"></i></button></td>
+          </tr>
 
-            <tr>
-              <td class="hour">5PM</td>
-              <td id="17td" class="scheduleTextArea"><textarea id="17textarea"></textarea></td>
-              <td class="scheduleTextArea saveBtn"><button id="17"><i class="fas fa-save"></i></button></td>
-            </tr>
+          <tr>
+            <td class="hour">5PM</td>
+            <td id="17td" class="scheduleTextArea"><textarea id="17textarea"></textarea></td>
+            <td class="scheduleTextArea saveBtn"><button id="17"><i class="fas fa-save"></i></button></td>
+          </tr>
 
         </table>
       </div>

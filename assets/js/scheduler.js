@@ -23,7 +23,7 @@ function init() {
 function setDateInHeader(){ 
     // Display date in header
     var now = moment().format('MMMM Do YYYY');
-    $("#currentDay").text(now);
+    $("#currentDay").text("Today: " + now);
 }
 
 // Change color of cell according to time.
@@ -44,11 +44,11 @@ function setTimeColor() {
 
 function setTextInTextarea() {
     // Read localStorage and display values in textarea 
-    scheduleDataLocal = JSON.parse(localStorage.getItem(localStorageName));
-    if (scheduleDataLocal != null) {
+    scheduleData = JSON.parse(localStorage.getItem(localStorageName));
+    if (scheduleData != null) {
         for (var i = 9; i < 18; i++) {
             var jsonKey = "scheduleData" + i;
-            var jsonValue = scheduleDataLocal[jsonKey];
+            var jsonValue = scheduleData[jsonKey];
             //console.log("jsonKeyName, jsonValue: ", jsonKey, jsonValue);
             // Set text to textarea
             $("#" + i + "textarea").val(jsonValue);
@@ -66,6 +66,7 @@ $("button").click(function() {
 
 function saveLocalStorage(hour, str) {
     var jsonElementName = "scheduleData" + hour;
+    //scheduleData = JSON.parse(localStorage.getItem(localStorageName));
     scheduleData[jsonElementName] = str;
     console.log("scheduleData in saveLocalStorage()" + jsonElementName, scheduleData[jsonElementName]);
     // set it to localStorage

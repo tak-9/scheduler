@@ -1,15 +1,35 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  line-height: 1;
+  background-image: url("../images/email-pattern.png");
 }
 
-@media only screen and (min-width: 600px) {
-  h1 {
-    font-size: 4.5rem;
-    font-weight: 300;
-    line-height: 1.2;
-  }    
+.navbar {
+  min-height: 60px;
+  background:#06AED5;
+  margin-bottom: 50px;
+}
+
+th {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: orchid;
+  background: powderblue;
+}
+
+.scheduleth {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.timeth {
+  border-bottom: 1px dashed #000000;
+  background: powderblue;
+}
+
+.buttonth{
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;  
 }
 
 textarea{
@@ -17,17 +37,8 @@ textarea{
   border: none;
   resize: none;
   color: #000000;
-  border-left: 1px solid black;
   padding: 10px;
   width: 100%
-}
-
-.jumbotron {
-  text-align: center;
-  background-color: transparent;
-  color: black;
-  border-radius: 0;
-  border-bottom: 10px solid black;
 }
 
 .description{
@@ -39,11 +50,6 @@ textarea{
   border-radius: 15px;
 }
 
-.row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;;
-}
 
 .scheduleTextArea {
   height: 80px;
@@ -53,9 +59,11 @@ textarea{
 .hour {
   background-color: #ffffff;
   color: #000000;
-  border-top: 1px dashed #000000;
+  border-bottom: 1px dashed #000000;
+  border-right: 1px solid black;
   text-align: right;
   padding-right: 10px;
+  width: 100px;
 }
 
 .past {
@@ -80,11 +88,20 @@ textarea{
   background-color: #06AED5;
   color: white;
   text-align: center;
+  width: 120px;
 }
 
 .saveBtn i:hover {
-  font-size: 20px;
+  font-size: 30px;
   transition: all .3s ease-in-out;
+  color:teal
+}
+
+/* change color onclick */
+.saveBtn i:active {
+  font-size: 30px;
+  color: #000000;
+  transition: all .8s ease-in-out;
 }
 
 table { 
@@ -95,4 +112,19 @@ button {
   background-color: #06AED5;
   border: none;
   color: white;
+}
+
+.fa-save { 
+  font-size:20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .saveBtn {
+    width: 45px;
+  }
+  
+  .hour {
+    width: 65px;
+  }
+  
 }

@@ -69,7 +69,7 @@ $("button").click(function() {
 function saveLocalStorage(hour, str) {
     var jsonElementName = "scheduleData" + hour;
     scheduleData[jsonElementName] = str;
-    console.log("scheduleData in saveLocalStorage()" + jsonElementName, scheduleData[jsonElementName]);
+    //console.log("scheduleData in saveLocalStorage()" + jsonElementName, scheduleData[jsonElementName]);
     // set it to localStorage
     localStorage.setItem(localStorageName, JSON.stringify(scheduleData));
 };

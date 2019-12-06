@@ -57,18 +57,17 @@ function setTextInTextarea() {
 };
 
 $("button").click(function() {
-    console.log(this);
+    //console.log(this);
     var hour = $(this).attr("id");
     var str = $("#" + hour + "textarea").val();
-    console.log("saveLocalStorage(hour, str): " + hour, str);
+    //console.log("saveLocalStorage(hour, str): " + hour, str);
     saveLocalStorage(hour, str);
 });
 
 function saveLocalStorage(hour, str) {
     var jsonElementName = "scheduleData" + hour;
-    //scheduleData = JSON.parse(localStorage.getItem(localStorageName));
     scheduleData[jsonElementName] = str;
-    console.log("scheduleData in saveLocalStorage()" + jsonElementName, scheduleData[jsonElementName]);
+    //console.log("scheduleData in saveLocalStorage()" + jsonElementName, scheduleData[jsonElementName]);
     // set it to localStorage
     localStorage.setItem(localStorageName, JSON.stringify(scheduleData));
 };

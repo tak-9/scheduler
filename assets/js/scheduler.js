@@ -44,8 +44,10 @@ function setTimeColor() {
 
 function setTextInTextarea() {
     // Read localStorage and display values in textarea 
-    scheduleData = JSON.parse(localStorage.getItem(localStorageName));
-    if (scheduleData != null) {
+    var scheduleDataStr = localStorage.getItem(localStorageName);
+    // check null here as we don't want to change sheduleData to null. it must be in JSON type.
+    if (scheduleDataStr != null) {
+        scheduleData = JSON.parse(scheduleDataStr);
         for (var i = 9; i < 18; i++) {
             var jsonKey = "scheduleData" + i;
             var jsonValue = scheduleData[jsonKey];
@@ -67,7 +69,7 @@ $("button").click(function() {
 function saveLocalStorage(hour, str) {
     var jsonElementName = "scheduleData" + hour;
     scheduleData[jsonElementName] = str;
-    //console.log("scheduleData in saveLocalStorage()" + jsonElementName, scheduleData[jsonElementName]);
+    console.log("scheduleData in saveLocalStorage()" + jsonElementName, scheduleData[jsonElementName]);
     // set it to localStorage
     localStorage.setItem(localStorageName, JSON.stringify(scheduleData));
 };

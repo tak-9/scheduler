@@ -12,6 +12,11 @@ Enter schedule and click the save icon to save the input.
 Moment.js library is used to handle time and date. 
 https://momentjs.com/
 
+
+Icons made by <a href="https://www.flaticon.com/authors/prettycons" title="prettycons">prettycons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+
+Background by https://www.toptal.com/designers/subtlepatterns/page/3/
+
 ## Screen Capture
 
 <img src="screencapture.png" width="200px">

@@ -7,24 +7,24 @@ body {
 
 .navbar {
   min-height: 60px;
-  background:#06AED5;
+  background:#0D3880;
   margin-bottom: 50px;
 }
 
 th {
   padding-top: 8px;
   padding-bottom: 8px;
-  color: orchid;
+  color: #0D3880;
   background: powderblue;
 }
 
 .scheduleth {
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
 }
 
 .timeth {
-  border-bottom: 1px dashed #000000;
+  border-bottom: 1px solid white;
   background: powderblue;
 }
 
@@ -58,10 +58,10 @@ textarea{
 }
 
 .hour {
-  background-color: #ffffff;
+  background-color: #EEEEEE;
   color: #000000;
-  border-bottom: 1px dashed #000000;
-  border-right: 1px solid black;
+  border-bottom: 1px dashed #0D3880;
+  border-right: 1px solid #0D3880;
   text-align: right;
   padding-right: 10px;
   width: 100px;
@@ -83,7 +83,7 @@ textarea{
 }
 
 .saveBtn {
-  border-left: 1px solid black;
+  border-left: 1px solid #0D3880;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06AED5;

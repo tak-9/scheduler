@@ -73,3 +73,18 @@ function saveLocalStorage(hour, str) {
     // set it to localStorage
     localStorage.setItem(localStorageName, JSON.stringify(scheduleData));
 };
+
+// Hide the NavText (below) when displayed on a mobile phone. 
+// "A simple calendar app for scheduling your work day"
+function hideNavText(x) {
+    //console.log("hideNavText");
+    var desc = document.getElementById("appdescription");
+    if (x.matches) { // If media query matches
+        desc.style.display = "none";
+    } else {
+        desc.style.display = "block";
+    }
+  }
+  var x = window.matchMedia("(max-width: 700px)")
+  hideNavText(x) // Call listener function at run time
+  x.addListener(hideNavText) // Attach listener function on state changes

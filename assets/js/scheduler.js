@@ -15,8 +15,8 @@ var localStorageName = "scheduleData" + moment().format('YYYYMMDD');
 
 init();
 function init() {
-    setDateInHeader();
     setTimeColor();
+    setTextInTextarea();
 };
 
 // Change color of cell according to time.

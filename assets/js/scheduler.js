@@ -17,14 +17,7 @@ init();
 function init() {
     setDateInHeader();
     setTimeColor();
-    setTextInTextarea();
 };
-
-function setDateInHeader(){ 
-    // Display date in header
-    var now = moment().format('MMMM Do YYYY');
-    $("#currentDay").text("Today: " + now);
-}
 
 // Change color of cell according to time.
 function setTimeColor() {
@@ -58,12 +51,13 @@ function setTextInTextarea() {
     }
 };
 
-$("button").click(function() {
+$("button").click(function () {
     //console.log(this);
     var hour = $(this).attr("id");
     var str = $("#" + hour + "textarea").val();
     //console.log("saveLocalStorage(hour, str): " + hour, str);
     saveLocalStorage(hour, str);
+    $("#" + hour).removeClass("unsaved");
 });
 
 function saveLocalStorage(hour, str) {
@@ -73,6 +67,15 @@ function saveLocalStorage(hour, str) {
     // set it to localStorage
     localStorage.setItem(localStorageName, JSON.stringify(scheduleData));
 };
+
+// Change the "SAVE" icon yellow when text entry in textarea has not been saved. 
+$('textarea').on('input', function () {
+    var textareaID = $(this).attr("id");
+    // Remove "textarea" from textareaID
+    var hour = textareaID.replace(/textarea/i, "");
+    //console.log(hour);
+    $("#" + hour).addClass("unsaved");
+});
 
 // Hide the NavText (below) when displayed on a mobile phone. 
 // "A simple calendar app for scheduling your work day"
@@ -84,7 +87,14 @@ function hideNavText(x) {
     } else {
         desc.style.display = "block";
     }
-  }
-  var x = window.matchMedia("(max-width: 700px)")
-  hideNavText(x) // Call listener function at run time
-  x.addListener(hideNavText) // Attach listener function on state changes
+}
+var x = window.matchMedia("(max-width: 700px)")
+hideNavText(x) // Call listener function at run time
+x.addListener(hideNavText) // Attach listener function on state changes
+
+
+setInterval(updateClock, 1000);
+function updateClock() {
+    var now = moment().format('D/MM/YYYY HH:mm:ss');
+    $("#currentDateTime").text("Today: " + now);
+}

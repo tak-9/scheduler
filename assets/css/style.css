@@ -105,6 +105,10 @@ textarea{
   transition: all .8s ease-in-out;
 }
 
+.unsaved{ 
+  color: yellow;
+}
+
 table { 
   width: 100%;
 }

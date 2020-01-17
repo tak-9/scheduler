@@ -7,7 +7,7 @@ The app displays standard business hours (9 a.m. to 5 p.m.).
 
 ## Usage
 Open this webpage to display the app.
-https://tak-9.github.io/week5/
+https://tak-9.github.io/scheduler
 
 
 Enter your schedule in "Schedule" textbox. The "Save" icon becomes yellow. 
